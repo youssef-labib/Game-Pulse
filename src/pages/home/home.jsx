@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from './partials/hero';
+import CardsSection from './partials/cards';
 
 const HomePage = () => {
 
@@ -7,6 +8,7 @@ const HomePage = () => {
         <>
 
             <HeroSection />
+            <CardsSection />
 
         </>
     );

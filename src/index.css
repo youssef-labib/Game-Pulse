@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-/* body style */
+/*~ body style */
 body {
     background-color: #121212;
     color: #e0e0e0;
     font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-/* navbar style */
+/*~ navbar style */
 .navbar-bg {
     background: rgba(20, 20, 20, 0.85);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -24,17 +24,18 @@ body {
     color: #b0b0b0;
 }
 
-/* hero style */
-.ws-container {
+/*~ hero style */
+.hero-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     width: 100%;
     padding-left: 2rem;
+    padding-bottom: 3rem;
 }
 
-.ws-left {
+.hero-left {
     display: flex;
     align-items: left;
     justify-content: center;
@@ -43,7 +44,7 @@ body {
     width: 40%;
 }
 
-.ws-right {
+.hero-right {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -61,12 +62,12 @@ body {
     border-radius: 1rem;
 }
 
-.ws-h1 {
-    font-size: 30px;
+.hero-h1 {
+    font-size: 44px;
     font-weight: 700;
 }
 
-.ws-p {
+.hero-p {
     padding-bottom: 1.5rem;
 }
 
@@ -82,27 +83,146 @@ body {
 }
 
 .btn:hover {
-    background: #6c28d991;
-    color: #ffffff;
+    background: #a78bfa;
+    color: #222222;
 }
 
+/*~ cards style */
+.cards-title {
+    font-size: 40px;
+    font-weight: 700;
+    padding-inline: 2rem;
+}
+
+.cards-input {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    margin: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    width: calc(100% - 4rem);
+}
+
+.cards-input::placeholder {
+    color: #b0b0b0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    width: 100%;
+    height: 70vh;
+    background-color: #222222;
+    border-radius: 8px;
+    transition: transform 0.25s;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px 0 rgba(167, 139, 250, 0.489); /* purple shadow */
+    z-index: 2;
+    background-color: #180735;
+}
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-details {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.4rem;
+}
+
+.top-card-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+.game-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #a78bfa;
+}
+
+.game-genre {
+    font-size: 0.95rem;
+    color: #c7d2fe;
+}
+
+.game-developer {
+    font-size: 0.9rem;
+    color: #a3a3a3;
+    padding-bottom: 0.6rem;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #6d28d9;
+    color: white;
+    border: none;
+    border-radius: 20rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.explore-btn:hover {
+    background: #a78bfa;
+    color: #222222;
+}
+
+/*! respo */
 @media (max-width: 428px) {
-    .ws-container {
+
+    /*^ hero respo style */
+    .hero-container {
         flex-direction: column;
         padding-left: 0;
     }
 
-    .ws-left {
+    .hero-left {
         width: 95%;
         align-items: center;
     }
 
-    .ws-right {
+    .hero-right {
         width: 100%;
     }
 
     .btn {
         width: 90vw;
     }
-}
 
+    /*^ cards respo style  */
+}

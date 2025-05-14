@@ -14,19 +14,19 @@ const HeroSection = () => {
     return (
         <>
 
-            <div className="ws-container">
+            <div className="hero-container">
 
-                <div className="ws-left">
+                <div className="hero-left">
 
-                    <h1 className='ws-h1'>Unleash Your Next Gaming Obsession</h1>
+                    <h1 className='hero-h1'>Unleash Your Next Gaming Obsession</h1>
 
-                    <p className='ws-p'>Browse, discover, and track the hottest games across all platforms. Get release dates, prices, and insider updates—all in one pulse-pounding hub.</p>
+                    <p className='hero-p'>Browse, discover, and track the hottest games across all platforms. Get release dates, prices, and insider updates—all in one pulse-pounding hub.</p>
 
-                    <button className='ws-btn btn'>Explore Games</button>
+                    <button className='hero-btn btn'>Explore Games</button>
 
                 </div>
 
-                <div className="ws-right">
+                <div className="hero-right">
 
                     <Carousel showThumbs={false} infiniteLoop autoPlay>
                         {images.map((src, idx) => (
