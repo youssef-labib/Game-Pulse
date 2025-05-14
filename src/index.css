@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.navbar-bg {
+    background: rgba(20, 20, 20, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+#search-navbar {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+#search-navbar::placeholder {
+    color: #b0b0b0;
+}
+
