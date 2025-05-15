@@ -95,4 +95,5 @@ const CardsSection = () => {
     );
 };
 
+export { games };
 export default CardsSection;
