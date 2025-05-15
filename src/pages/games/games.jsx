@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const mockGames = {
+const allGames = {
     gta6: {
         title: "GTA VI",
         cover: "https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_01_With_Logos_landscape.8596f77a.jpg&w=1920&q=75",
@@ -156,16 +156,7 @@ const mockGames = {
 
 const GameDetails = () => {
     const { id } = useParams();
-    const game = mockGames[id] || {
-        title: "Unknown Game",
-        cover: "https://via.placeholder.com/800x400?text=No+Cover",
-        description: "No information available.",
-        genre: "-",
-        developer: "-",
-        price: "-",
-        release: "-",
-        platforms: "-"
-    };
+    const game = allGames[id]
 
     return (
         <>
