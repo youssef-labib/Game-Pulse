@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useGameContext } from '../../../context/GameContext'
 
 class Game {
     constructor(title, id, cover, price, genres, developer) {
@@ -63,11 +65,19 @@ let games = [
 ]
 
 const CardsSection = () => {
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState("")
+    const navigate = useNavigate()
+    const { setSelectedGameId } = useGameContext()
 
     const filteredGames = games.filter(game =>
         game.title.toLowerCase().includes(search.toLowerCase())
-    );
+    )
+    
+    const handleGameClick = (e, gameId) => {
+        e.preventDefault()
+        setSelectedGameId(gameId)
+        navigate('/games/' + gameId)
+    }
 
     return (
         <>
@@ -86,14 +96,14 @@ const CardsSection = () => {
                             </div>
                             <p className='game-genre'>Genres: {game.genres.join(", ")}</p>
                             <p className='game-developer'>Developer: {game.developer}</p>
-                            <a href={`/games/${game.id}`} className="explore-btn">Explore More</a>
+                            <a href="#" onClick={(e) => handleGameClick(e, game.id)} className="explore-btn">Explore More</a>
                         </div>
                     </div>
                 ))}
             </div>
         </>
-    );
-};
+    )
+}
 
-export { games };
-export default CardsSection;
+export { games }
+export default CardsSection
