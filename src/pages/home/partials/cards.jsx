@@ -42,7 +42,7 @@ let AssassinsCreedMirageObject = new Game("Assassin's Creed Mirage", "acmirage",
 let ResidentEvilFourRemakeObject = new Game("Resident Evil 4 Remake", "re4remake", residentEvilFourRemakeImg, 59.99, ["horror", "survival"], "Capcom")
 let starfieldObject = new Game("Starfield", "starfield", starfieldImg, 69.99, ["rpg", "sci-fi"], "Bethesda Game Studios")
 let alanWakeTwoObject = new Game("Alan Wake 2", "alanwake2", alanWakeTwoImg, 59.99, ["horror", "thriller"], "Remedy Entertainment")
-let fc25Object = new Game("EA Sports FC 25", "fc25", fc25Img, 69.99, ["sports", "football"],"EA Sports")
+let fc25Object = new Game("EA Sports FC 25", "fc25", fc25Img, 69.99, ["sports", "football"], "EA Sports")
 let forzaMotorsportObject = new Game("Forza Motorsport", "forzamotorsport", forzaMotorsportImg, 69.99, ["racing", "simulation"], "Turn 10 Studios")
 let baldurGate3Object = new Game("Baldur's Gate 3", "baldursgate3", baldurGate3Img, 59.99, ["rpg", "fantasy"], "Larian Studios")
 
@@ -72,7 +72,7 @@ const CardsSection = () => {
     const filteredGames = games.filter(game =>
         game.title.toLowerCase().includes(search.toLowerCase())
     )
-    
+
     const handleGameClick = (e, gameId) => {
         e.preventDefault()
         setSelectedGameId(gameId)
@@ -82,7 +82,7 @@ const CardsSection = () => {
     return (
         <>
             <h1 className='cards-title'>Discover Games</h1>
-            <input className='cards-input' type="text" placeholder="Search games..." value={search} onChange={e => setSearch(e.target.value)}/>
+            <input className='cards-input' type="text" placeholder="Search games..." value={search} onChange={e => setSearch(e.target.value)} />
             <div className="cards-container">
                 {filteredGames.map((game) => (
                     <div className="card" key={game.id}>

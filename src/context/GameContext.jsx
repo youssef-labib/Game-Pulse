@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState } from 'react'
-
 import { games } from '../pages/home/partials/cards'
 
 const GameContext = createContext()
